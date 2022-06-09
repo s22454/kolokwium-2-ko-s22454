@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using kolokwium_2_ko_s22454.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,11 +29,11 @@ namespace kolokwium_2_ko_s22454
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddScoped<>();
-            //services.AddDbContext<>(otp =>
-            //{
-            //   otp.UseSqlServer(
-            //      "Data Source=localhost,1433,Initial Catalog=med;User ID=SA;Password=Bardzomocnehaslo2");
-            //});
+            services.AddDbContext<MusicDbContext>(otp =>
+            {
+               otp.UseSqlServer(
+                  "Data Source=jdbc:jtds:sqlserver://db-mssql.pjwstk.edu.pl/2019SBD;User ID=s22454;Password=;Initial Catalog=2019SBD;Integrated Security=False");
+            });
             
             services.AddControllers();
             services.AddSwaggerGen(c =>
