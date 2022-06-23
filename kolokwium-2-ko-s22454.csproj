@@ -21,8 +21,6 @@
 
   <ItemGroup>
     <Folder Include="Migrations" />
-    <Folder Include="Models\DTOs" />
-    <Folder Include="Services" />
   </ItemGroup>
 
 </Project>

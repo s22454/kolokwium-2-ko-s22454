@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using kolokwium_2_ko_s22454.Models;
 
 namespace kolokwium_2_ko_s22454.Migrations
 {
     [DbContext(typeof(MusicDbContext))]
-    partial class MusicDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220623084754_start domowej bazy")]
+    partial class startdomowejbazy
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -111,7 +113,7 @@ namespace kolokwium_2_ko_s22454.Migrations
                     b.Property<float>("Duraturation")
                         .HasColumnType("real");
 
-                    b.Property<int?>("IdMusicAlbum")
+                    b.Property<int>("IdMusicAlbum")
                         .HasColumnType("int");
 
                     b.Property<string>("TrackName")

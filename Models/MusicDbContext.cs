@@ -48,7 +48,7 @@ namespace kolokwium_2_ko_s22454.Models
                 e.HasKey(e => e.IdTrack);
                 e.Property(e => e.TrackName).HasMaxLength(20).IsRequired();
                 e.Property(e => e.Duraturation).IsRequired();
-                
+
                 e.ToTable("Track");
             });
             
